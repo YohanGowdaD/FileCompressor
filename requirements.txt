@@ -1,3 +1,4 @@
 streamlit
 pikepdf
 Pillow
+PyMuPDF
