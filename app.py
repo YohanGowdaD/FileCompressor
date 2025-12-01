@@ -1485,36 +1485,36 @@ if uploaded is not None:
                 )
                 
                 # Tips
-                # if file_suffix == ".pdf" and not which_gs():
-                #     st.info("💡 **Pro Tip:** Install [Ghostscript](https://www.ghostscript.com/download/gsdnld.html) for 30-50% better compression!")
+                if file_suffix == ".pdf" and not which_gs():
+                    st.info("💡 **Pro Tip:** Install [Ghostscript](https://www.ghostscript.com/download/gsdnld.html) for 30-50% better compression!")
                 
             except Exception as e:
                 st.error(f"❌ Error: {str(e)}")
                 st.exception(e)
 
 # Info section
-# with st.expander("ℹ️ How It Works"):
-#     st.markdown("""
-#     **PDF Compression:**
-#     - Extracts & recompresses images with optimal quality/size balance
-#     - Removes embedded fonts & metadata
-#     - Uses Ghostscript (if installed) for additional 30-50% compression
-#     - Tries multiple strategies and keeps the best result
+with st.expander("ℹ️ How It Works"):
+    st.markdown("""
+    **PDF Compression:**
+    - Extracts & recompresses images with optimal quality/size balance
+    - Removes embedded fonts & metadata
+    - Uses Ghostscript (if installed) for additional 30-50% compression
+    - Tries multiple strategies and keeps the best result
     
-#     **DOCX Compression:**
-#     - Optimizes embedded images (resize + quality reduction)
-#     - Removes metadata, thumbnails, and revision history
-#     - Re-zips with maximum compression
+    **DOCX Compression:**
+    - Optimizes embedded images (resize + quality reduction)
+    - Removes metadata, thumbnails, and revision history
+    - Re-zips with maximum compression
     
-#     **Best Results:**
-#     - Documents with many images compress better
-#     - Text-only PDFs have limited compression potential
-#     - Installing Ghostscript dramatically improves PDF results
-#     """)
+    **Best Results:**
+    - Documents with many images compress better
+    - Text-only PDFs have limited compression potential
+    - Installing Ghostscript dramatically improves PDF results
+    """)
 
-# st.markdown("---")
-# st.markdown("""
-# <div style='text-align: center; color: #666;'>
-#     <small>Pro Document Compressor v2.0 | Powered by PyMuPDF, Pikepdf & Ghostscript</small>
-# </div>
-# """, unsafe_allow_html=True)
+st.markdown("---")
+st.markdown("""
+<div style='text-align: center; color: #666;'>
+    <small>Pro Document Compressor v2.0 | Powered by PyMuPDF, Pikepdf & Ghostscript</small>
+</div>
+""", unsafe_allow_html=True)
